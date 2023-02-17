@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { FaLinkedin,FaTwitterSquare, FaGithubSquare } from 'react-icons/fa'
 import { IconContainer } from './Header'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const PageFooter = styled.div`
       height: 700px;
@@ -16,6 +18,7 @@ const PageFooter = styled.div`
     padding-top: 50px;
     border-bottom: 1px solid black;
     font-family: "Shippori Mincho",serif;
+    color:  #09f0d9;
  }
     
 /*     
@@ -102,14 +105,20 @@ input,textarea{
 
 
 const Footer = () => {
+ useEffect(() => {
+        AOS.init();
+     }, [])
+
   return (
     <>
       <PageFooter>
-       <div>
-        <h3 className='bas'><i>I’m a frontend developer, based in  Nigeria. <br/> Currently a freelancer. You can see my hobbies on @linkedln <br/> and some photos on me too. </i> </h3>
+       <div >
+        <h3 className='bas'>I’m a frontend developer, based in  Nigeria. <br/> Currently a freelancer. You can see my hobbies on @linkedln <br/> and some photos on me too.</h3>
        </div>
        <div className='page-footer'>
-        <div className='page-footer1'>
+        <div className='page-footer1' data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
             <h2>DROP A LINE</h2>
             <form>
                 <div>
@@ -127,7 +136,9 @@ const Footer = () => {
             </form>
             <button className='btn'>  SEND MESSAGE</button>
         </div>
-        <div className='page-footer2'>
+        <div className='page-footer2' data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
           <h2>CONTACT ME</h2>
           No 5 Kisumu Avenue,WUSE ZONE 2 <br/>
           +234-8091211842 <br/>

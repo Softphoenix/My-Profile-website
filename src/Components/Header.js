@@ -4,20 +4,25 @@ import { Link } from 'react-router-dom'
 import { FaLinkedin,FaTwitterSquare, FaGithubSquare } from 'react-icons/fa'
 
 const StyledHeader = styled.header`
-  height: 60px;
+  width: 100%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   background-color: cadetblue;
-  padding: 0px 5%;
+  /* padding: 0px 5%; */
   align-items: center;
+  position: fixed;
+  top: 0;
+  /* background-color: #09f0d5; */
+
 
 `
 const Logo = styled.div `
-   font-size: 25px;
-   font-weight: bold;
+   font-size:30px;
+   font-weight: bolder;
    text-transform: capitalize;
-   font-family:  "oswald", sans-serif;
-   
+   font-family:  "Shippori Mincho",serif;
+   padding-left: 50px;
   
 
 `
@@ -25,7 +30,7 @@ const Logo = styled.div `
 const NavContainer = styled.nav`
       display: flex;
       gap: 30px;
-      
+     
 
 `
 
@@ -48,6 +53,7 @@ export const IconContainer = styled.div`
    display: flex;
    gap: 20px;
    font-size: 20px;
+   padding-right: 50px;
 
    .circle{
       height: 40px;
@@ -62,7 +68,10 @@ export const IconContainer = styled.div`
    .circle:hover{
     background: white;
     color: black;
+    scale: 1.2;
    }
+
+
 `
  
 

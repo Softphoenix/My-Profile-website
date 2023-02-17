@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+
 
 export const About = () => {
+  
+  useEffect(() => {
+        AOS.init();
+     }, [])
+  
   return (
     <div>About Us 
          vLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a enim molestie, ornare enim sed, laoreet nibh. Nulla et egestas orci. Integer lacinia vestibulum augue, vel hendrerit ipsum blandit ac. Suspendisse lorem tellus, tempor ut metus auctor, dictum sodales enim. Etiam pellentesque justo a mi dignissim, efficitur vulputate lacus auctor. Nunc non tortor sit amet ex maximus dignissim. Nulla rutrum quam nec mi suscipit laoreet. Ut at nunc tristique, mattis ipsum quis, dictum diam.
